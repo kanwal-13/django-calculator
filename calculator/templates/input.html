@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="mx-5 mt-5 px-5 pt-5 text-center fs-4">
+<form action=" " method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <button class="btn btn-secondary" type="submit" name="add">ADD</button>
+    <button class="btn btn-secondary" type="submit" name="sub">SUB</button>
+    <button class="btn btn-secondary" type="submit" name="mul">MUL</button>
+    <button class="btn btn-secondary" type="submit" name="div">DIV</button>
+</form>
+
+<br/>
+<br/>
+
+<h3>Result:  {{ result }}</h3>
+
+</div>
+
+{% endblock %}
